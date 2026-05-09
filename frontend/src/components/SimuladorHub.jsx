@@ -32,9 +32,6 @@ export default function SimuladorHub() {
     setLogs(prev => [...prev, { time, msg, type }]);
   };
 
-  useEffect(() => {
-    logsEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [logs]);
 
   const iniciarSimulacao = async () => {
     if (origem === destino) {
