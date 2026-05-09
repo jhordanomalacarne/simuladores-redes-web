@@ -18,7 +18,7 @@ const getPcsCoordinates = () => {
 
 const pcs = getPcsCoordinates();
 
-export default function SimuladorHub() {
+export default function SimuladorHub({ onBack }) {
   const [origem, setOrigem] = useState('PC1');
   const [destino, setDestino] = useState('PC5');
   const [isAnimating, setIsAnimating] = useState(false);
@@ -100,6 +100,29 @@ export default function SimuladorHub() {
 
   return (
     <div className="simulador-container">
+      {/* Botão de Voltar */}
+      {onBack && (
+        <button 
+          onClick={onBack} 
+          style={{
+            alignSelf: 'flex-start',
+            background: 'transparent',
+            border: 'none',
+            color: '#94a3b8',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            fontSize: '0.9rem',
+            fontWeight: 'bold',
+            marginBottom: '-1rem',
+            padding: '0.5rem'
+          }}
+        >
+          <span>←</span> Voltar para Menu
+        </button>
+      )}
+
       {/* Painel de Controle Superior */}
       <div className="controls-panel">
         <div className="control-group">
