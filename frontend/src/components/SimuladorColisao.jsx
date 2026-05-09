@@ -274,6 +274,12 @@ export default function SimuladorColisao({ onBack }) {
         ))}
         <div ref={logsEndRef} />
       </div>
+
+      {/* Créditos do Laboratório */}
+      <div className="lab-credits">
+        <p>Última atualização: 09/05/2026</p>
+        <p>Autoria: Jhordano Malacarne Bravim</p>
+      </div>
     </div>
   );
 }
