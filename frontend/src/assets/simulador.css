@@ -277,6 +277,91 @@
 .log-time { color: #64748b; margin-right: 0.5rem; }
 .log-info { color: #94a3b8; }
 .log-success { color: #10b981; }
+/* -------------------------------------
+ *  SWITCH (BOTÃO LIGA/DESLIGA)
+ * ------------------------------------- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #334155;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+/* Vermelho Padrão (Colisão) */
+input:checked + .slider {
+  background-color: #ef4444;
+}
+
+/* Azul (Broadcast) */
+.switch-blue input:checked + .slider {
+  background-color: #38bdf8;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* -------------------------------------
+ *  DOMÍNIOS LÓGICOS (SVG)
+ * ------------------------------------- */
+.domain-circle {
+  fill: none;
+  animation: drawCircle 1s ease-out forwards;
+}
+
+.collision-domain {
+  stroke: rgba(239, 68, 68, 0.7);
+  stroke-width: 4px;
+  stroke-dasharray: 10, 10;
+}
+
+.broadcast-domain {
+  stroke: rgba(56, 189, 248, 0.7);
+  stroke-width: 4px;
+}
+
+@keyframes drawCircle {
+  0% { transform: scale(0); opacity: 0; transform-origin: 50% 50%; }
+  100% { transform: scale(1); opacity: 1; transform-origin: 50% 50%; }
+}
+
 .log-warning { color: #f59e0b; }
 .log-error { color: #ef4444; }
 

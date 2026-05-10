@@ -18,11 +18,11 @@ export default function Home({ onSelectLab }) {
       icone: '💥'
     },
     {
-      id: 'lab3_switch',
-      titulo: 'Lab 3: O Switch e a Tabela MAC',
-      descricao: 'Suba para a Camada 2. Entenda como o Switch aprende os endereços físicos (MAC) e entrega os pacotes apenas para quem interessa.',
-      disponivel: false,
-      icone: '🧠'
+      id: 'lab3_dominios',
+      titulo: 'Lab 3: Domínios de Colisão e Broadcast',
+      descricao: 'Entenda a topologia lógica de um Hub. Veja por que toda a rede sofre junta quando o assunto é colisão e difusão de pacotes.',
+      disponivel: true,
+      icone: '⭕'
     },
     {
       id: 'lab4_sniffing',
