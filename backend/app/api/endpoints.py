@@ -88,3 +88,38 @@ def simular_colisao(requisicao: SimularColisaoRequest):
     return {
         "eventos": eventos
     }
+
+class SimularSwitchRequest(BaseModel):
+    pc_origem: str
+    pc_destino: str
+
+@router.post("/simular/switch")
+def simular_switch(requisicao: SimularSwitchRequest):
+    """
+    Simula o comportamento de um Switch L2 usando Unicast.
+    """
+    eventos = []
+    
+    eventos.append({
+        "tipo": "tx_switch",
+        "mensagem": f"🔵 Quadro Ethernet gerado. Viajando pelo cabo de {requisicao.pc_origem} até o Switch..."
+    })
+
+    eventos.append({
+        "tipo": "mac_table",
+        "mensagem": f"🧠 Inteligência L2: Switch leu o MAC Destino, consultou a Tabela MAC na memória (CAM) e encontrou a porta correta para {requisicao.pc_destino}."
+    })
+    
+    eventos.append({
+        "tipo": "unicast",
+        "mensagem": f"🎯 UNICAST: O circuito foi fechado internamente. O quadro foi encaminhado única e exclusivamente pelo cabo do {requisicao.pc_destino}."
+    })
+    
+    eventos.append({
+        "tipo": "rx_success",
+        "mensagem": f"✅ {requisicao.pc_destino} recebeu o quadro com segurança. Nenhum outro PC na rede foi incomodado (sem ruído)."
+    })
+    
+    return {
+        "eventos": eventos
+    }

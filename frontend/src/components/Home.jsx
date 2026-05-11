@@ -25,11 +25,11 @@ export default function Home({ onSelectLab }) {
       icone: '⭕'
     },
     {
-      id: 'lab4_sniffing',
-      titulo: 'Lab 4: Sniffing e Segurança L1',
-      descricao: 'Ative o Modo Promíscuo e intercepte dados que não eram para você. Uma introdução visual a vulnerabilidades de redes legadas.',
-      disponivel: false,
-      icone: '🕵️'
+      id: 'lab4_switch',
+      titulo: 'Lab 4: O Switch e o Unicast',
+      descricao: 'Suba para a Camada 2. Entenda como a tabela MAC permite enviar um quadro apenas para a porta de destino correta, evitando flooding inútil.',
+      disponivel: true,
+      icone: '🎛️'
     }
   ];
 
