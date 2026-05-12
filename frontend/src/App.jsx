@@ -4,6 +4,7 @@ import SimuladorHub from './components/SimuladorHub';
 import SimuladorColisao from './components/SimuladorColisao';
 import SimuladorDominios from './components/SimuladorDominios';
 import SimuladorSwitch from './components/SimuladorSwitch';
+import SimuladorDominiosSwitch from './components/SimuladorDominiosSwitch';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -31,6 +32,7 @@ function App() {
         {telaAtual === 'lab2_colisao' && <SimuladorColisao onBack={() => navegarPara('home')} />}
         {telaAtual === 'lab3_dominios' && <SimuladorDominios onBack={() => navegarPara('home')} />}
         {telaAtual === 'lab4_switch' && <SimuladorSwitch onBack={() => navegarPara('home')} />}
+        {telaAtual === 'lab5_dominios_switch' && <SimuladorDominiosSwitch onBack={() => navegarPara('home')} />}
       </main>
 
       <Footer />

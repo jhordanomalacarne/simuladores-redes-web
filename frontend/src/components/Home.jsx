@@ -30,6 +30,12 @@ export default function Home({ onSelectLab }) {
       descricao: 'Suba para a Camada 2. Entenda como a tabela MAC permite enviar um quadro apenas para a porta de destino correta, evitando flooding inútil.',
       disponivel: true,
       icone: '🎛️'
+    },
+    {
+      id: 'lab5_dominios_switch',
+      titulo: 'Lab 5: Domínios no Switch L2',
+      descricao: 'Compare visualmente como o Switch quebra a rede em múltiplos domínios de colisão independentes, isolando o tráfego de cada porta através de microsegmentação.',
+      disponivel: true,
     }
   ];
 

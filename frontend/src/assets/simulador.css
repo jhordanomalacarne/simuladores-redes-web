@@ -378,6 +378,21 @@ input:checked + .slider:before {
   stroke-dasharray: 10, 10;
 }
 
+/* Cápsula de colisão por porta (Microsegmentação do Switch) */
+.collision-capsule {
+  stroke: rgba(239, 68, 68, 0.35);
+  stroke-width: 35px;
+  stroke-linecap: round;
+  stroke-dasharray: 10, 10;
+  fill: none;
+  animation: drawCapsule 1s ease-out forwards;
+}
+
+@keyframes drawCapsule {
+  0% { stroke-dashoffset: 200; opacity: 0; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
 .broadcast-domain {
   stroke: rgba(56, 189, 248, 0.7);
   stroke-width: 4px;
